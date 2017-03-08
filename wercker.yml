@@ -1,4 +1,11 @@
 box: ruby
+build:
+  steps:
+    - add-to-known_hosts:
+      hostname: github.com
+    - script:
+      name: hello
+      code: hostname
 deploy:
   steps:
     - s3sync:
