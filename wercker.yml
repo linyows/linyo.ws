@@ -1,15 +1,29 @@
 box: node
 build:
   steps:
+    - add-ssh-key:
+      keyname: DEPLOY_SSH_KEY
     - add-to-known_hosts:
       hostname: github.com
     - script:
       name: prepare deploy
       code: |
+        git config user.email 'pleasemailus@wercker.com'
+        git config user.name 'werckerbot'
         npm install -g vue-cli
         npm install
-        npm run generate
+    - script:
+      name: generate and push to deploy
+      code: |
+        npm run generate || true
         npm run deploy
+    - script:
+      name: checkout deploy
+      code: |
+        git fetch
+        git checkout -b deploy origin/deploy
+        git clean -f
+        rm -rf .git .nuxt dist node_modules .nojekyll
   after-steps:
     - linyows/slack_notification:
         token: $SLACK_TOKEN
