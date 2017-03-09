@@ -1,11 +1,19 @@
-box: ruby
+box: node
 build:
   steps:
     - add-to-known_hosts:
       hostname: github.com
     - script:
-      name: hello
-      code: hostname
+      name: prepare deploy
+      code: |
+        npm install -g vue-cli
+        npm install
+        npm run generate
+        npm run deploy
+  after-steps:
+    - linyows/slack_notification:
+        token: $SLACK_TOKEN
+        channel: C02FCHEQH
 deploy:
   steps:
     - s3sync:
