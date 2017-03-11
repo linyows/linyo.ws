@@ -1,11 +1,7 @@
-<html>
-  <head>
-    <title>OCTOPASS - Management linux user and authentication by the organization/team on Github</title>
-  </head>
-  <body>
-    <h1 id="logo">OCTOPASS</h1>
+<template>
+  <section class="container">
+    <h1 class="title">OCTOPASS</h1>
     <p id="description">Management linux user and authentication by the organization/team on Github</p>
-
     <h2>Description</h2>
     <p>This is linux user management tool with the organization/team on github, and authentication.
        Depending on github for user management, there are certain risks,
@@ -163,5 +159,10 @@
       ```
 
       <p>Enable octopass as name resolution.</p>
-  </body>
-</html>
+    <nuxt-link class="button" to="/">
+      linyows
+    </nuxt-link>
+  </section>
+</template>
+
+//Management linux user and authentication by the organization/team on Github
