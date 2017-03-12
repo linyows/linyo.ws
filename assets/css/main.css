@@ -1,9 +1,9 @@
 html, body
 {
   background-color: #fff;
-  color: #2e2f30;
+  color: #111;
   letter-spacing: 0.5px;
-  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-family: 'Poppins', 'Source Sans Pro', Arial, sans-serif;
   height: 100vh;
   margin: 0;
 }
@@ -12,12 +12,11 @@ footer
 {
   padding: 20px;
   text-align: center;
-  border-top: 1px solid #ddd;
 }
 
 a, a:hover, a:focus, a:visited
 {
-  color: #41B883;
+  color: #000;
 }
 
 .logo {
