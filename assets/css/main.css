@@ -1,5 +1,4 @@
-html, body
-{
+html, body {
   background-color: #fff;
   color: #111;
   letter-spacing: 0.5px;
@@ -8,27 +7,18 @@ html, body
   margin: 0;
 }
 
-footer
-{
+footer {
   padding: 20px;
   text-align: center;
 }
 
-a, a:hover, a:focus, a:visited
-{
+a, a:hover, a:focus, a:visited {
   color: #000;
 }
 
-.logo {
-  width: 243px;
-  height: 218px;
-}
-
-.page-enter-active, .page-leave-active
-{
+.page-enter-active, .page-leave-active {
   transition: opacity .5s
 }
-.page-enter, .page-leave-active
-{
+.page-enter, .page-leave-active {
   opacity: 0
 }
