@@ -69,7 +69,11 @@
 
       <ul>
         <li>CentOS 7.x</li>
+        <li>CentOS 6.x</li>
+        <li>CentOS 5.x</li>
         <li>Ubuntu Xenial</li>
+        <li>Ubuntu Trusty</li>
+        <li>Ubuntu Precise</li>
       </ul>
 
       <h3>Building from Source</h3>
